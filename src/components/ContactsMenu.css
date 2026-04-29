@@ -1,0 +1,95 @@
+.contacts-menu {
+  margin: 0% 5% 5% 0%;
+  width: 100%;
+  max-height: 90vh; /* Limit height to 80% of viewport height */
+  background-color: #311f48;
+  border-right: 2px solid #a28ba9;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  border-radius: 8px;
+}
+
+/* Custom scrollbar styling */
+.contacts-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contacts-menu::-webkit-scrollbar-track {
+  background: #2a1e3a;
+  border-radius: 4px;
+}
+
+.contacts-menu::-webkit-scrollbar-thumb {
+  background: #a28ba9;
+  border-radius: 4px;
+}
+
+.contacts-menu::-webkit-scrollbar-thumb:hover {
+  background: #b89cc0;
+}
+
+.contacts-upper-bar {
+  margin-bottom: 20px;
+}
+
+.contact-searchbar {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #a28ba9;
+  border-radius: 4px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: #3a2659;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.contact-item:hover {
+  background-color: #4a2f6a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  border-color: #a28ba9;
+}
+
+.contact-item img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+  border: 2px solid #a28ba9;
+}
+
+.contact-item div {
+  flex: 1;
+}
+
+.contact-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-item p {
+  color: #a28ba9;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
