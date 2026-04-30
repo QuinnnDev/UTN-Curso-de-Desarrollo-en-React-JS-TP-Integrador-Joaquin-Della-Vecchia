@@ -1,18 +1,16 @@
 import { createContext, useState } from "react";
 
+const selectedContactContext = createContext();
 
-const ContactContext = createContext();
+const SelectedContactContextProvider = ({ children }) => {
+  const [selectedContact, setSelectedContact] = useState(null);
+  const provider_value = { selectedContact, setSelectedContact };
 
-const ContactContextProvider = ({ children }) => {
+  return (
+    <selectedContactContext.Provider value={provider_value}>
+      {children}
+    </selectedContactContext.Provider>
+  );
+};
 
-    const [selectedContact, setSelectedContact] = useState({ name: "Alice", avatar: "https://i.pravatar.cc/300", nroTelefono: "2" });
-    const provider_value = {selectedContact, setSelectedContact};
-
-    return (
-        <ContactContext.Provider value={provider_value}>
-            {children}
-        </ContactContext.Provider>
-    )
-}
-
-export {ContactContext, ContactContextProvider}
+export { selectedContactContext, SelectedContactContextProvider };

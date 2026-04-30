@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ContactsMenu.css'
 import useForm from '../hooks/UseForm'
 import { useContacts } from '../hooks/useContacts';
+import { WindowStateContext } from '../context/WindowStateContext';
 
 export default function ContactsMenu(/*{ contactData }*/) {
 
 
-
   const {selectContact} = useContacts()
+
+
+  const { contacts, loading, error } = useContacts();
 
 
   const contactData = [
@@ -22,7 +25,6 @@ export default function ContactsMenu(/*{ contactData }*/) {
     { nombre: "Judy", avatar: "https://i.pravatar.cc/330", nroTelefono: "10" },
     { nombre: "Karl", avatar: "https://i.pravatar.cc/370", nroTelefono: "11" },
   ];
-
 
 
   const initialFormState = {
@@ -45,8 +47,9 @@ export default function ContactsMenu(/*{ contactData }*/) {
       </div>
 
       <div className="contact-list">
-        {contactData &&
-          contactData.map((contact, index) => (
+        
+        {!loading && contacts &&
+          contacts.map((contact, index) => (
             <div key={index} className="contact-item" onClick={() => selectContact(contact)}>
               <img src={contact.avatar} alt={contact.nombre} />
               <div>
@@ -56,6 +59,9 @@ export default function ContactsMenu(/*{ contactData }*/) {
             </div>
           ))}
       </div>
+
+
+
     </div>
   );
 }

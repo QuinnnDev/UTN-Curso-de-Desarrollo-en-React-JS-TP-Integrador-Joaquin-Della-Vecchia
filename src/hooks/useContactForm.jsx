@@ -1,0 +1,58 @@
+import { useState } from "react";
+import { createContact } from "../services/contacts";
+
+function useContactForm(initialFormState, onAddContact) {
+  const [formState, setFormState] = useState(initialFormState);
+
+  function selectPfp(avatarUrl) {
+    setFormState((currentValue) => ({
+      ...currentValue,
+      avatar: avatarUrl,
+    }));
+  }
+
+  async function handleSubmit(evento) {
+    evento.preventDefault();
+
+    console.log("form submitted with data:", formState);
+
+    if (!formState.nombre.trim() || !formState.nroTelefono.trim() || !formState.avatar) {
+      alert("Recuerda llenar todos los campos antes de añadir un contacto");
+      return;
+    }
+    if(formState.nroTelefono.trim().length < 10 || isNaN(parseInt(formState.nroTelefono))) {
+        alert("Por favor ingresa un número de teléfono válido");
+        return;
+    }
+
+
+    await createContact(formState.avatar, formState.nombre, formState.nroTelefono);
+    onAddContact();
+    alert("Contacto añadido exitosamente");
+    setFormState(initialFormState);
+
+    
+    
+
+  }
+
+  function handleChangeInput(evento) {
+    const field_name = evento.target.name;
+    const field_value = evento.target.value;
+    setFormState((currentValue) => {
+      return {
+        ...currentValue,
+        [field_name]: field_value,
+      };
+    });
+  }
+
+  return {
+    selectPfp,
+    formState,
+    handleSubmit,
+    handleChangeInput,
+  };
+}
+
+export default useContactForm;

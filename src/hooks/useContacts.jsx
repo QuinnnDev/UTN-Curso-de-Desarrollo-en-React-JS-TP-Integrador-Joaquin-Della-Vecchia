@@ -1,43 +1,19 @@
-import { getContactList } from "../services/contacts";
-import { useContext, useState } from "react";
-import { useEffect } from "react";
-import { ContactContext } from "../context/ContactContext";
+import { useContext } from "react";
+import { selectedContactContext } from "../context/ContactContext";
+import { ContactsContext } from "../context/ContactsContext";
+import { WindowStateContext } from "../context/WindowStateContext";
 
 function useContacts() {
-  const [contacts, setContacts] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const { setSelectedContact, selectedContact } = useContext(ContactContext);
-
-
-  async function loadContacts() {
-    /*
-    try {
-      setError(null);
-      setLoading(true);
-      const response = await getContactList();
-      setContacts(response);
-    } catch (error) {
-      console.error("Obtener la lista de contactos de firestore fallo", error);
-    } finally {
-      setLoading(false);
-    }
-      */
-  }
-
-  //controla la cantidad de veces que se ejecuta una funcionalidad
-  useEffect(() => {
-    //efecto
-    loadContacts();
-  }, []);
-
+  const { setSelectedContact } = useContext(selectedContactContext);
+  const { setWindowState } = useContext(WindowStateContext);
+  const { contacts, loading, error, refresh } = useContext(ContactsContext);
 
   function selectContact(contact) {
     setSelectedContact(contact);
+    setWindowState("mensajes");
   }
 
-
-  return { selectContact, contacts, loading, error };
+  return { selectContact, contacts, loading, error, refresh };
 }
 
 export { useContacts };

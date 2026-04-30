@@ -3,7 +3,7 @@ import "./MessagesMenu.css";
 import Message from "./Message";
 import useForm from "../hooks/UseForm";
 import { useMessages } from "../hooks/useMessages";
-import { ContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/ContactContext";
 
 export default function MessagesMenu() {
   const messagesEndRef = useRef(null);
@@ -13,12 +13,12 @@ export default function MessagesMenu() {
     newMessage: "",
   };
 
-  const { selectedContact } = useContext(ContactContext);
+  const { selectedContact } = useContext(selectedContactContext);
   const { handleSendMessage, handleSubmit, handleChangeInput, formState } =
     useForm(initialFormState, sendMessage);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'instant' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "instant" });
   }, [messages]);
 
   return (
@@ -27,13 +27,12 @@ export default function MessagesMenu() {
 
       <div className="messages-header">
         <img
-          src={selectedContact.avatar}
-          alt={selectedContact.nombre}
+          src={selectedContact?.avatar}
+          alt={selectedContact?.nombre}
           className="contact-avatar"
         />
-        <div className="contact-info">{<h3>{selectedContact.nombre}</h3>}</div>
+        <div className="contact-info">{<h3>{selectedContact?.nombre}</h3>}</div>
       </div>
-
 
       {/* Messages Area */}
 
@@ -45,7 +44,6 @@ export default function MessagesMenu() {
           ))}
         <div ref={messagesEndRef} />
       </div>
-
 
       {/* Message Input */}
 

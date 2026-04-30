@@ -1,11 +1,10 @@
 import { getMessagesList, createMessage } from "../services/messages";
 import { useContext, useState, useEffect } from "react";
-import { ContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/ContactContext";
 import { randomMsgResponses } from "../data/randomResponses";
 
-
 function useMessages() {
-  const { selectedContact } = useContext(ContactContext);
+  const { selectedContact } = useContext(selectedContactContext);
   const [messages, setMessages] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -48,23 +47,23 @@ function useMessages() {
     console.log("mensaje enviado:", messageText);
     refresh();
 
-    
     // limpia otros timeouts o sino se crashea al mandar muchos juntos
     if (refreshTimeoutId) {
       clearTimeout(refreshTimeoutId);
     }
-    
-    
+
     // a los 3 segs de enviar un msj, se refresca la lsita de msj (para mostrar la respuesta automatica)
     const newTimeoutId = setTimeout(async () => {
-      const respuesta = randomMsgResponses[Math.floor(Math.random() * randomMsgResponses.length)];
+      const respuesta =
+        randomMsgResponses[
+          Math.floor(Math.random() * randomMsgResponses.length)
+        ];
       console.log("respuesta automatica:", respuesta);
       await createMessage(selectedContact.nroTelefono, "1", respuesta);
       refresh();
       setRefreshTimeoutId(null);
     }, 3000);
     setRefreshTimeoutId(newTimeoutId);
-
   }
 
   return { messages, loading, error, refresh, sendMessage };

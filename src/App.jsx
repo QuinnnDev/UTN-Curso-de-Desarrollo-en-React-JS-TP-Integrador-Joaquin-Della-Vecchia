@@ -1,19 +1,25 @@
-import { ContactContext, ContactContextProvider } from './context/ContactContext';
-import { HomeScreen } from './screens/HomeScreen';
+import {
+  selectedContactContext,
+  SelectedContactContextProvider,
+} from "./context/ContactContext";
+import { ContactsContextProvider } from "./context/ContactsContext";
+import { WindowStateContextProvider } from "./context/WindowStateContext";
+import { HomeScreen } from "./screens/HomeScreen";
 
-import { Route, Routes } from 'react-router'
-
+import { Route, Routes } from "react-router";
 
 function App() {
-
-
   return (
-    <ContactContextProvider>
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-      </Routes>
-    </ContactContextProvider>
+    <WindowStateContextProvider>
+      <SelectedContactContextProvider>
+        <ContactsContextProvider>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+        </ContactsContextProvider>
+      </SelectedContactContextProvider>
+    </WindowStateContextProvider>
   );
 }
 
-export default App
+export default App;

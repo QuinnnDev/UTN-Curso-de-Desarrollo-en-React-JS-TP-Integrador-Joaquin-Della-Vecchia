@@ -1,0 +1,28 @@
+.home-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(300deg, #8152c496 0%, #1c0e2ec0 100%);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.home-emoji {
+  font-size: 4rem;
+  opacity: 0.5;
+}
+
+.home-content h2 {
+  margin: 0;
+  color: #e0e0e0;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

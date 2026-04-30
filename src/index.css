@@ -69,15 +69,16 @@ body {
 #home-screen {
  display: flex;
  flex-direction: row;
- min-height: 46.5rem;
+ min-height: 45.5rem;
  justify-content: center;
- margin-top: 2%;
+ margin-top: 1%;
  margin-bottom: 2%;
  
 }
 
 #contacts-section{
   background-color: #311f48;
+  padding-bottom: 15px;
   min-height: 100%;
   width: 23%;
   border-left: 2px solid #ccc;
@@ -92,7 +93,8 @@ body {
 
 #messages-section{
   background-color: #534d5b;
-  min-height: 100%;
+  min-height: 70%;
+  max-height: 80%;
   width: 78%;
 }
 

@@ -10,7 +10,7 @@ import { db } from "../config/firebase";
 
 export async function getContactList() {
   //selecciono la coleccion de contactos de mi db
-  const collection_selected = collection(db, "mensajes");
+  const collection_selected = collection(db, "contactos");
 
   //obtengo las referencias de los documentos de la coleccion
   const snapshot = await getDocs(collection_selected);
@@ -44,6 +44,6 @@ export async function createContact(avatar, nombre, nroTelefono) {
     nombre,
     nroTelefono,
   };
-  const contact_ref = await addDoc(collection(db, "contactos", new_contact));
+  const contact_ref = await addDoc(collection(db, "contactos"), new_contact);
   return contact_ref.id;
 }

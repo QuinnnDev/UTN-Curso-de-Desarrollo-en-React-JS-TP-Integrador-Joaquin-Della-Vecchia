@@ -1,5 +1,5 @@
 .contacts-menu {
-  margin: 0% 5% 5% 0%;
+  margin: 0% 5% 0% 0%;
   width: 100%;
   max-height: 90vh; /* Limit height to 80% of viewport height */
   background-color: #311f48;
@@ -42,6 +42,7 @@
 }
 
 .contact-list {
+  min-height: 40rem;
   list-style: none;
   padding: 0;
 }
@@ -92,4 +93,25 @@
   font-size: 14px;
   margin: 0;
   font-weight: 400;
+}
+
+.contacts-add-button {
+  display: flex;
+  justify-content: center;
+  height: 8%;
+}
+
+.add-contact-button {
+  margin-top:    10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 8px 64px;
+  background-color: #a28ba9;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 25px;
+  font-weight: 550;
+  font-size: larger;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
