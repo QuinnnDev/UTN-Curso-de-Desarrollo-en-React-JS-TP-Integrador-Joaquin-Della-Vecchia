@@ -5,7 +5,7 @@
 
 ## 🚀 Cómo ejecutar el proyecto
 
-#Metodo 1:
+# Metodo 1:
 Para correr el proyecto localmente:
 
 1. Abrí una terminal en la carpeta raíz del proyecto  
@@ -17,18 +17,18 @@ Para correr el proyecto localmente:
 npm run dev
 ```
 
-#Metodo 1:
+# Metodo 1:
 El proyecto esta subido en Vercel bajo el siguiente link para probarlo online
 
 ## Preview
 
-#Preview desde desktop
+# Preview desde desktop
 
 ![Preview del proyecto desktop](./preview-img/preview-chat-pc.png)
 
 ![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-pc.png)
 
-#Preview desde desktop
+# Preview desde mobile
 
 ![Preview del proyecto desktop](./preview-img/preview-chat-mobile.png)
 
