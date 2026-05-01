@@ -42,7 +42,8 @@
 }
 
 .contact-list {
-  min-height: 40rem;
+  min-height: 35rem;
+  max-height: 38rem;
   list-style: none;
   padding: 0;
 }

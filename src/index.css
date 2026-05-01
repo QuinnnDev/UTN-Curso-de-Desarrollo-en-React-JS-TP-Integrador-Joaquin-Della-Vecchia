@@ -70,10 +70,12 @@ body {
  display: flex;
  flex-direction: row;
  min-height: 45.5rem;
+ max-height: 49rem;
  justify-content: center;
  margin-top: 1%;
  margin-bottom: 2%;
- 
+ border-top-left-radius: 16px;
+ border-bottom-left-radius: 16px;
 }
 
 #contacts-section{
@@ -82,8 +84,8 @@ body {
   min-height: 100%;
   width: 23%;
   border-left: 2px solid #ccc;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
 #contacts-upper-bar{
@@ -96,6 +98,9 @@ body {
   min-height: 70%;
   max-height: 80%;
   width: 78%;
+  border-right: 2px solid #ccc;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 h1,
