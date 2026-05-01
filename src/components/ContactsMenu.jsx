@@ -38,12 +38,7 @@ export default function ContactsMenu(/*{ contactData }*/) {
     <div className="contacts-menu">
       <div className="contacts-upper-bar">
         Contacts
-        <input
-          type="text"
-          name="text"
-          className="contact-searchbar"
-          placeholder="Search contacts..."
-        />
+
       </div>
 
       <div className="contact-list">

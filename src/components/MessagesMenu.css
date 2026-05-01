@@ -1,11 +1,24 @@
 /* Messages Menu Styles */
-.messages-menu {
-  display: flex;
-  flex-direction: column;
-  height: 94vh;
-  background-color: #1a1a1a;
-  border-left: 2px solid #a28ba9;
-  overflow: hidden;
+@media (orientation: landscape) {
+  .messages-menu {
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    background-color: #1a1a1a;
+    border-left: 2px solid #a28ba9;
+    overflow: hidden;
+  }
+}
+
+@media (orientation: portrait) {
+  .messages-menu {
+    display: flex;
+    flex-direction: column;
+    height: 45.5rem;
+    background-color: #1a1a1a;
+    border-left: 2px solid #a28ba9;
+    overflow: hidden;
+  }
 }
 
 /* Header */
@@ -83,8 +96,6 @@
   justify-content: flex-start;
 }
 
-
-
 .message-content {
   max-width: 70%;
   padding: 12px 16px;
@@ -127,26 +138,52 @@
   color: #a28ba9;
 }
 
-/* Message Input Container */
-.message-input-container {
-  display: flex;
-  padding: 16px;
-  background-color: #311f48;
-  border-top: 1px solid #a28ba9;
-  gap: 12px;
-  align-items: center;
+@media (orientation: portrait) {
+  .message-input-container {
+    display: flex;
+    padding: 16px;
+    background-color: #311f48;
+    border-top: 1px solid #a28ba9;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .message-input {
+    flex: 1;
+    padding: 12px 8px;
+    width: auto;
+    border: 2px solid #a28ba9;
+    border-radius: 25px;
+    background-color: #3a2659;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
 }
 
-.message-input {
-  flex: 1;
-  padding: 12px 16px;
-  border: 2px solid #a28ba9;
-  border-radius: 25px;
-  background-color: #3a2659;
-  color: #ffffff;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.3s ease;
+@media (orientation: landscape) {
+  /* Message Input Container */
+  .message-input-container {
+    display: flex;
+    padding: 16px;
+    background-color: #311f48;
+    border-top: 1px solid #a28ba9;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #a28ba9;
+    border-radius: 25px;
+    background-color: #3a2659;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
 }
 
 .message-input:focus {

@@ -1,13 +1,27 @@
-.home-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background: linear-gradient(300deg, #8152c496 0%, #1c0e2ec0 100%);
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-
+@media (orientation: landscape) {
+  .home-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(300deg, #8152c496 0%, #1c0e2ec0 100%);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
 }
+
+@media (orientation: portrait) {
+  .home-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(300deg, #8152c496 0%, #1c0e2ec0 100%);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
 
 .home-content {
   display: flex;

@@ -78,29 +78,58 @@ body {
  border-bottom-left-radius: 16px;
 }
 
-#contacts-section{
-  background-color: #311f48;
-  padding-bottom: 15px;
-  min-height: 100%;
-  width: 23%;
-  border-left: 2px solid #ccc;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+@media (orientation: landscape){
+  #contacts-section{
+    background-color: #311f48;
+    padding-bottom: 15px;
+    min-height: 100%;
+    width: 23%;
+    border-left: 2px solid #ccc;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
 }
+
+@media (orientation: portrait){
+  #contacts-section{
+    background-color: #311f48;
+    min-height: 70%;
+    max-height: 80%;
+    width: 30%;
+    border-left: 2px solid #ccc;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+}
+
 
 #contacts-upper-bar{
   background-color: #311f48;
   
 }
 
-#messages-section{
-  background-color: #534d5b;
-  min-height: 70%;
-  max-height: 80%;
-  width: 78%;
-  border-right: 2px solid #ccc;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+@media (orientation: landscape){
+  #messages-section{
+    background-color: #534d5b;
+    min-height: 70%;
+    max-height: 80%;
+    width: 78%;
+    border-right: 2px solid #ccc;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+@media (orientation: portrait){
+  #messages-section{
+    background-color: #534d5b;
+    min-height: 70%;
+    max-height: 80%;
+    width: 70%;
+    border-right: 2px solid #ccc;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
 }
 
 h1,
