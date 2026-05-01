@@ -1,7 +1,7 @@
 import {
   selectedContactContext,
   SelectedContactContextProvider,
-} from "./context/ContactContext";
+} from "./context/SelectedContactContext";
 import { ContactsContextProvider } from "./context/ContactsContext";
 import { WindowStateContextProvider } from "./context/WindowStateContext";
 import { HomeScreen } from "./screens/HomeScreen";

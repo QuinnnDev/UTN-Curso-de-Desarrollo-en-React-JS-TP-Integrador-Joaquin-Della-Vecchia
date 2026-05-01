@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import ContactsMenu from "../components/ContactsMenu";
 import MessagesMenu from "../components/MessagesMenu";
-import { selectedContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/SelectedContactContext";
 import HomeMenu from "../components/HomeMenu";
 import { WindowStateContext } from "../context/WindowStateContext";
 import AddContactMenu from "../components/AddContactMenu";

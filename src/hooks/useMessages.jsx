@@ -1,6 +1,6 @@
 import { getMessagesList, createMessage } from "../services/messages";
 import { useContext, useState, useEffect } from "react";
-import { selectedContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/SelectedContactContext";
 import { randomMsgResponses } from "../data/randomResponses";
 
 function useMessages() {

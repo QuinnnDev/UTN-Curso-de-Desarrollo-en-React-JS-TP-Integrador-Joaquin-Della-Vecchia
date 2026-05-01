@@ -3,7 +3,7 @@ import "./MessagesMenu.css";
 import Message from "./Message";
 import useForm from "../hooks/UseForm";
 import { useMessages } from "../hooks/useMessages";
-import { selectedContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/SelectedContactContext";
 
 export default function MessagesMenu() {
   const messagesEndRef = useRef(null);

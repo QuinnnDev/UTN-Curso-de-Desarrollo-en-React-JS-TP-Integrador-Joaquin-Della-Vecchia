@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { selectedContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/SelectedContactContext";
 import { ContactsContext } from "../context/ContactsContext";
 import { WindowStateContext } from "../context/WindowStateContext";
 

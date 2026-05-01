@@ -4,7 +4,9 @@ import {
   doc,
   getDoc,
   getDocs,
+  query,
   updateDoc,
+  where,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 
@@ -25,17 +27,24 @@ export async function getContactList() {
 }
 
 /** Obtener un contacto por id usando FIRESTORE */
-export async function getContactById(id) {
-  const doc_to_find = doc(db, "contactos", id);
-  const snapshot = await getDoc(doc_to_find);
+export async function getContactByNroTelefono(nroTelefono) {
+  const q = query(
+    collection(db, "contactos"),
+    where("nroTelefono", "==", nroTelefono)
+  );
 
-  if (!snapshot.exists()) {
-    return null;
-  }
-  return (contact_found = {
-    id: snapshot.id,
-    ...snapshot.data(),
-  });
+const snapshot = await getDocs(q);
+
+if (snapshot.empty) {
+  return null; // Not found
+}
+
+// Since it's unique, get the first (and only) result
+const doc = snapshot.docs[0];
+return {
+  id: doc.id,
+  ...doc.data(),
+};
 }
 
 export async function createContact(avatar, nombre, nroTelefono) {

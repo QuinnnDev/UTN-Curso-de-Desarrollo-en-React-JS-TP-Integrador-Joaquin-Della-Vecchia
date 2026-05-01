@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { selectedContactContext } from "../context/ContactContext";
+import { selectedContactContext } from "../context/SelectedContactContext";
 
 export default function Message({ message }) {
   const { selectedContact } = useContext(selectedContactContext);
