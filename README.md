@@ -1,16 +1,50 @@
-# React + Vite
+# UTN - Curso de Desarrollo en React JS  
+## Unidad 1 — Joaquin Della Vecchia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Cómo ejecutar el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+#Metodo 1:
+Para correr el proyecto localmente:
 
-## React Compiler
+1. Abrí una terminal en la carpeta raíz del proyecto  
+   (la que contiene `src`, `public`, etc.)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Ejecutá el siguiente comando:
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#Metodo 1:
+El proyecto esta subido en Vercel bajo el siguiente link para probarlo online
+
+## Preview
+
+#Preview desde desktop
+
+![Preview del proyecto desktop](./preview-img/preview-chat-pc)
+
+![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-pc)
+
+#Preview desde desktop
+
+![Preview del proyecto desktop](./preview-img/preview-chat-mobile)
+
+![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-mobile)
+
+
+### Autor
+
+Joaquin Della Vecchia Ramirez, estudiante del Curso de Desarrollo en React JS
+Modulo 2, Unidad 1
+
+
+## Creditos Adicionales de las imagenes
+
+[foto de pefil miku (celeste)](https://ar.pinterest.com/pin/577586721002962961/)
+
+[foto de perfil neru (amarilla)](https://ar.pinterest.com/pin/4503668372649194/)
+
+[foto de perfil teto (roja)](https://ar.pinterest.com/pin/4503668372649209/)
