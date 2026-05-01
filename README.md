@@ -24,15 +24,15 @@ El proyecto esta subido en Vercel bajo el siguiente link para probarlo online
 
 #Preview desde desktop
 
-![Preview del proyecto desktop](./preview-img/preview-chat-pc)
+![Preview del proyecto desktop](./preview-img/preview-chat-pc.png)
 
-![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-pc)
+![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-pc.png)
 
 #Preview desde desktop
 
-![Preview del proyecto desktop](./preview-img/preview-chat-mobile)
+![Preview del proyecto desktop](./preview-img/preview-chat-mobile.png)
 
-![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-mobile)
+![Preview del proyecto desktop](./preview-img/preview-añadir-contacto-mobile.png)
 
 
 ### Autor
